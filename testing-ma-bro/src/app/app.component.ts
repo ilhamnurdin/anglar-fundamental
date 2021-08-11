@@ -13,10 +13,15 @@ export class AppComponent {
   kumpulanAngka = [0,1,2,3];
 
   ketikaDiKlik() {
+    // awal title tidak mucul, ketika di klik title akan muncul
+    this.apakahTampil = !this.apakahTampil,
+
     this.namaDepan = 'AHHA',
     this.namaBelakang = 'Sampah sodara-sodara',
     this.umur = 120
   }
 
   username:string = 'Bayufajar';
+
+  apakahTampil:boolean = false;
 }

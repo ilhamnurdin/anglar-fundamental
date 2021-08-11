@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h1 *ngIf="apakahTampil">{{title}}</h1>
 <h2>One Way Data Binding:</h2>
 <h3>{{ "Nama aing " + namaDepan + " " + namaBelakang+ ", Dan Umur aing " + umur + " tahun"}}</h3>
 <button (click)="ketikaDiKlik()">Klik untuk ganti</button>
