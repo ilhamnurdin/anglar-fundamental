@@ -1,9 +1,12 @@
-<h1 *ngIf="apakahTampil">{{title}}</h1>
+<!-- <h1 *ngIf="apakahTampil">{{title}}</h1>
 <h2>One Way Data Binding:</h2>
-<h3>{{ "Nama aing " + namaDepan + " " + namaBelakang+ ", Dan Umur aing " + umur + " tahun"}}</h3>
-<button (click)="ketikaDiKlik()">Klik untuk ganti</button>
-<br>
+<h3>{{ "Nama aing " + namaDepan + " " + namaBelakang+ ", Dan Umur aing " + umur + " tahun"}}</h3> -->
+<button (click)="ketikaDiKlik()">Klik untuk menambah index</button>
+<!-- <br>
 <br>
 <h2>Two way Data Binding:</h2>
 <input type="text" name="value" [(ngModel)]="username">
-<p>{{username}}</p>
+<p>{{username}}</p> -->
+<br>
+<h1 *ngFor="let index of kumpulanAngka"> index ke-{{index}}</h1>
+<h1 *ngFor="let indexOfString of kumpulanString"> index ke-{{indexOfString}}</h1>
