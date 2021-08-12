@@ -39,6 +39,9 @@
             <div class="mt-3 mb-2 col-lg-12 col-12">
                 <button class="btn" [disabled]="regisForm.invalid">Submit</button>
             </div>
+            <div class="mt-3 mb-2">
+                <button *ngFor="let item of Arry2" (click)="updateItem(item)">Update</button>
+            </div>
         </div>
     </form>
 </div>

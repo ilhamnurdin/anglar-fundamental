@@ -10,6 +10,14 @@ export class RegisterformComponent implements OnInit {
 
   regisForm:any;
 
+  Arry = ['a','b','c'];
+  Arry2 = [
+    {id: 1, name: "Hardik" },
+    {id: 2, name: "Vimal" },
+    {id: 3, name: "Paresh" }
+  ];
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -19,6 +27,13 @@ export class RegisterformComponent implements OnInit {
       "email":new FormControl(null,[Validators.required,Validators.email]),
       "mobileNumber":new FormControl(null,[Validators.required,Validators.pattern('[0-9]*')])
     });
+
+    console.log(this.Arry)
+    let index = this.Arry.indexOf('a');
+    console.log(index)//menampilakn indeks ke berapa
+
+    let index2dimensi = this.Arry2.findIndex(x=>x.id == 3);
+    console.log(index2dimensi)//menampilakn indeks ke berapa
   }
 
   SubmitData(){
@@ -42,4 +57,14 @@ export class RegisterformComponent implements OnInit {
     return this.regisForm.get('mobileNumber');
   }
 
+
+
+
+  updateItem(item){
+    let index = this.Arry2.indexOf(item);
+    item.name = "Terupdate";
+    this.Arry2[index] = item;
+
+    console.log(this.Arry2);
+  }
 }
