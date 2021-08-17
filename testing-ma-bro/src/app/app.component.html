@@ -12,3 +12,17 @@
 <!-- <h1 *ngFor="let indexOfString of kumpulanString"> index ke-{{indexOfString}}</h1> -->
 <!-- <app-home></app-home> -->
 <app-registerform></app-registerform>
+<br>
+<div style="text-align: center;">
+    <i>Teams: </i>
+    <select style="width: 150px; margin-bottom: 20px;" (change)="updatePlayers($event.target.value)">
+        <option selected disabled>Select Team</option>
+        <option *ngFor="let team of teams" [value]="team">{{team}}</option>
+    </select>
+    <br>
+    <i>Name Playes: </i>
+    <select style="width: 150px;">
+        <option selected disabled>Select Player</option>
+        <option *ngFor="let player of players" [value]="player">{{player}}</option>
+    </select>
+</div>
